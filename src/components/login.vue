@@ -89,7 +89,7 @@ export default {
         loginData.append("userState", this.loginForm.user_type);
         this.$axios({
           method: "post",
-          url: "http://api.hzycjy.top/admin/login",
+          url: "https://api.hzycjy.top/admin/login",
           data: loginData,
         })
           .then((res) => {

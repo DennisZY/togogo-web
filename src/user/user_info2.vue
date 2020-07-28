@@ -145,7 +145,7 @@ export default {
   methods: {
     logout() {
       var that = this;
-      let url = "http://api.hzycjy.top/admin/logout";
+      let url = "https://api.hzycjy.top/admin/logout";
       axios
         .post(url)
         .then((res) => {
@@ -184,7 +184,7 @@ export default {
       var num = this.$route.query.id;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/userInfo/getUserInfoById?openId=" + num,
+        url: "https://api.hzycjy.top/userInfo/getUserInfoById?openId=" + num,
       })
         .then((res) => {
           that.imfor = res.data.oData;
@@ -199,7 +199,7 @@ export default {
       var num = this.$route.query.id;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/userInfo/UserAskReplyList?openId=" + num,
+        url: "https://api.hzycjy.top/userInfo/UserAskReplyList?openId=" + num,
       })
         .then((res) => {
           that.list = res.data.oData;

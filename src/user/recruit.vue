@@ -170,7 +170,7 @@ export default {
   methods: {
     logout() {
       var that = this;
-      let url = "http://api.hzycjy.top/admin/logout";
+      let url = "https://api.hzycjy.top/admin/logout";
       axios
         .post(url)
         .then((res) => {
@@ -188,7 +188,7 @@ export default {
       this.$axios({
         methods: "get",
         url:
-          "http://api.hzycjy.top/api/home/select?cityName=" +
+          "https://api.hzycjy.top/api/home/select?cityName=" +
           that.city +
           "&jobType=" +
           that.jobType +
@@ -209,7 +209,7 @@ export default {
       var that = this;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/api/home/postType",
+        url: "https://api.hzycjy.top/api/home/postType",
       })
         .then((res) => {
           that.Type = res.data.oData;
@@ -225,7 +225,7 @@ export default {
       var that = this;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/api/home/city",
+        url: "https://api.hzycjy.top/api/home/city",
       })
         .then((res) => {
           that.city_list = res.data.oData;
@@ -239,7 +239,7 @@ export default {
       var that = this;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/api/home/jobType",
+        url: "https://api.hzycjy.top/api/home/jobType",
       })
         .then((res) => {
           that.city_jobType = res.data.oData;
@@ -252,7 +252,8 @@ export default {
       var that = this;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/api/home/index?pageNum=" + that.currentPage,
+        url:
+          "https://api.hzycjy.top/api/home/index?pageNum=" + that.currentPage,
       })
         .then((res) => {
           that.list = res.data.oData;
@@ -269,7 +270,7 @@ export default {
       this.$axios({
         methods: "get",
         url:
-          "http://api.hzycjy.top/api/home/select?cityName=" +
+          "https://api.hzycjy.top/api/home/select?cityName=" +
           that.city +
           "&jobType=" +
           that.jobType +
@@ -293,7 +294,7 @@ export default {
       this.$axios({
         methods: "get",
         url:
-          "http://api.hzycjy.top/api/home/select?cityName=" +
+          "https://api.hzycjy.top/api/home/select?cityName=" +
           that.city +
           "&jobType=" +
           that.jobType +
@@ -317,7 +318,7 @@ export default {
       this.$axios({
         methods: "get",
         url:
-          "http://api.hzycjy.top/api/home/select?cityName=" +
+          "https://api.hzycjy.top/api/home/select?cityName=" +
           that.city +
           "&jobType=" +
           that.jobType +
@@ -341,7 +342,7 @@ export default {
       this.$axios({
         methods: "get",
         url:
-          "http://api.hzycjy.top/api/home/select?cityName=" +
+          "https://api.hzycjy.top/api/home/select?cityName=" +
           that.city +
           "&jobType=" +
           that.jobType +

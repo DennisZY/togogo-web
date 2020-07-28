@@ -132,7 +132,7 @@ export default {
   methods: {
     logout() {
       var that = this;
-      let url = "http://api.hzycjy.top/admin/logout";
+      let url = "https://api.hzycjy.top/admin/logout";
       axios
         .post(url)
         .then((res) => {
@@ -149,7 +149,7 @@ export default {
       var that = this;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/userInfo/getAllUser",
+        url: "https://api.hzycjy.top/userInfo/getAllUser",
       })
         .then((res) => {
           that.list = res.data.oData.userDetailVoList;
@@ -185,7 +185,7 @@ export default {
           .$axios({
             method: "post",
             url:
-              "http://api.hzycjy.top/userInfo/deleteUser?openId=" +
+              "https://api.hzycjy.top/userInfo/deleteUser?openId=" +
               dataList[index].openId,
           })
           .then(() => {
@@ -208,7 +208,7 @@ export default {
       this.$axios({
         methods: "get",
         url:
-          "http://api.hzycjy.top/userInfo/searchUserInfo?userName=" +
+          "https://api.hzycjy.top/userInfo/searchUserInfo?userName=" +
           that.formInline.user,
       })
         .then((res) => {

@@ -233,7 +233,7 @@ export default {
   methods: {
     logout() {
       var that = this;
-      let url = "http://api.hzycjy.top/admin/logout";
+      let url = "https://api.hzycjy.top/admin/logout";
       axios
         .post(url)
         .then((res) => {
@@ -258,7 +258,7 @@ export default {
         that
           .$axios({
             method: "delete",
-            url: "http://api.hzycjy.top/api/post/deletePost?postId=" + num,
+            url: "https://api.hzycjy.top/api/post/deletePost?postId=" + num,
           })
           .then(() => {
             this.$message({
@@ -281,7 +281,7 @@ export default {
       var num = this.$route.query.id;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/api/post/postDetail?postId=" + num,
+        url: "https://api.hzycjy.top/api/post/postDetail?postId=" + num,
       })
         .then((res) => {
           that.company = res.data.oData;
@@ -296,7 +296,7 @@ export default {
       var num = this.$route.query.id;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/robot/getAllRobotUser",
+        url: "https://api.hzycjy.top/robot/getAllRobotUser",
       })
         .then((res) => {
           that.account = res.data.oData;
@@ -311,7 +311,7 @@ export default {
       var num = this.$route.query.id;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/api/post/postDetail?postId=" + num,
+        url: "https://api.hzycjy.top/api/post/postDetail?postId=" + num,
       })
         .then((res) => {
           that.list = res.data.oData.commentsVoList;
@@ -352,7 +352,7 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           var that = this;
-          let url = "http://api.hzycjy.top/api/post/comment";
+          let url = "https://api.hzycjy.top/api/post/comment";
           let data = {
             commentId: this.who.openId,
             postId: num,
@@ -396,7 +396,7 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           var that = this;
-          let url = "http://api.hzycjy.top/api/post/comment";
+          let url = "https://api.hzycjy.top/api/post/comment";
           let data = {
             commentId: this.who.openId,
             postId: num,
@@ -433,7 +433,7 @@ export default {
           .$axios({
             method: "delete",
             url:
-              "http://api.hzycjy.top/api/post/deleteComment?commentId=" +
+              "https://api.hzycjy.top/api/post/deleteComment?commentId=" +
               this.list[index].commentList[lilindex].commentId,
           })
           .then(() => {
@@ -467,7 +467,7 @@ export default {
           .$axios({
             method: "delete",
             url:
-              "http://api.hzycjy.top/api/post/deleteComment?commentId=" +
+              "https://api.hzycjy.top/api/post/deleteComment?commentId=" +
               dataList[index].commentId,
           })
           .then(() => {

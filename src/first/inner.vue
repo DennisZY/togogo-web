@@ -59,7 +59,7 @@
                 style="height:60px;width:60px;border: 0.5px solid rgb(121, 121, 121);"
                 class="avatar-uploader"
                 :headers="myHeaders"
-                action="http://api.hzycjy.top/upload/uploadImg"
+                action="https://api.hzycjy.top/upload/uploadImg"
                 :show-file-list="false"
                 :on-success="handleAvatarSuccess"
                 :before-upload="beforeAvatarUpload"
@@ -193,7 +193,7 @@ export default {
   methods: {
     logout() {
       var that = this;
-      let url = "http://api.hzycjy.top/admin/logout";
+      let url = "https://api.hzycjy.top/admin/logout";
       axios
         .post(url)
         .then((res) => {
@@ -218,7 +218,7 @@ export default {
       this.$axios({
         methods: "get",
         url:
-          "http://api.hzycjy.top/robot/getAllRobotUser?page=" +
+          "https://api.hzycjy.top/robot/getAllRobotUser?page=" +
           that.currentPage,
       })
         .then((res) => {
@@ -242,7 +242,7 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           var that = this;
-          let url = "http://api.hzycjy.top/robot/addRobotUser";
+          let url = "https://api.hzycjy.top/robot/addRobotUser";
           let data = {
             userName: that.form.id,
             userImage: that.form.imageUrl,
@@ -283,7 +283,7 @@ export default {
           .$axios({
             method: "post",
             url:
-              "http://api.hzycjy.top/userInfo/deleteUser?openId=" +
+              "https://api.hzycjy.top/userInfo/deleteUser?openId=" +
               dataList[index].openId,
           })
           .then(() => {

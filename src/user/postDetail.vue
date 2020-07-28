@@ -238,7 +238,7 @@ export default {
   methods: {
     logout() {
       var that = this;
-      let url = "http://api.hzycjy.top/admin/logout";
+      let url = "https://api.hzycjy.top/admin/logout";
       axios
         .post(url)
         .then((res) => {
@@ -269,7 +269,7 @@ export default {
           .$axios({
             method: "post",
             url:
-              "http://api.hzycjy.top/api/post/collect?status=" +
+              "https://api.hzycjy.top/api/post/collect?status=" +
               index +
               "&postId=" +
               num +
@@ -298,7 +298,7 @@ export default {
       var num = this.$route.query.id;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/robot/getAllRobotUser",
+        url: "https://api.hzycjy.top/robot/getAllRobotUser",
       })
         .then((res) => {
           that.account = res.data.oData;
@@ -314,7 +314,7 @@ export default {
       this.$axios({
         methods: "get",
         url:
-          "http://api.hzycjy.top/api/post/postDetail?postId=" +
+          "https://api.hzycjy.top/api/post/postDetail?postId=" +
           num +
           "&openId=" +
           that.user_id,
@@ -349,7 +349,7 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           var that = this;
-          let url = "http://api.hzycjy.top/api/post/comment";
+          let url = "https://api.hzycjy.top/api/post/comment";
           let data = {
             postId: num,
             content: this.form.something,
@@ -386,7 +386,7 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           var that = this;
-          let url = "http://api.hzycjy.top/api/post/comment";
+          let url = "https://api.hzycjy.top/api/post/comment";
           let data = {
             postId: num,
             content: this.form.something,
@@ -422,7 +422,7 @@ export default {
           .$axios({
             method: "delete",
             url:
-              "http://api.hzycjy.top/api/post/deleteComment?commentId=" +
+              "https://api.hzycjy.top/api/post/deleteComment?commentId=" +
               this.list[index].commentList[lilindex].commentId,
           })
           .then(() => {
@@ -456,7 +456,7 @@ export default {
           .$axios({
             method: "delete",
             url:
-              "http://api.hzycjy.top/api/post/deleteComment?commentId=" +
+              "https://api.hzycjy.top/api/post/deleteComment?commentId=" +
               dataList[index].commentId,
           })
           .then(() => {

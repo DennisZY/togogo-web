@@ -99,7 +99,7 @@ export default {
         registerData.append("userPwd", this.registerForm.password_01);
         this.$axios({
           method: "post",
-          url: "http://api.hzycjy.top/admin/register",
+          url: "https://api.hzycjy.top/admin/register",
           data: registerData,
         })
           .then((res) => {

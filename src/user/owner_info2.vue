@@ -75,7 +75,7 @@
                 <el-upload
                   style="float: left;margin-left:5px"
                   class="avatar-uploader"
-                  action="http://api.hzycjy.top/upload/uploadImg"
+                  action="https://api.hzycjy.top/upload/uploadImg"
                   :headers="myHeaders"
                   :show-file-list="false"
                   :on-success="handleAvatarSuccess"
@@ -194,7 +194,7 @@ export default {
   methods: {
     logout() {
       var that = this;
-      let url = "http://api.hzycjy.top/admin/logout";
+      let url = "https://api.hzycjy.top/admin/logout";
       axios
         .post(url)
         .then((res) => {
@@ -245,7 +245,7 @@ export default {
       this.$axios({
         methods: "get",
         url:
-          "http://api.hzycjy.top/userInfo/getUserInfoById?openId=" + that.num,
+          "https://api.hzycjy.top/userInfo/getUserInfoById?openId=" + that.num,
       })
         .then((res) => {
           that.imfor = res.data.oData;
@@ -260,7 +260,7 @@ export default {
       this.$axios({
         methods: "get",
         url:
-          "http://api.hzycjy.top/userInfo/UserCollectList?openId=" + that.num,
+          "https://api.hzycjy.top/userInfo/UserCollectList?openId=" + that.num,
       })
         .then((res) => {
           that.list = res.data.oData;
@@ -297,7 +297,7 @@ export default {
           .$axios({
             method: "post",
             url:
-              "http://api.hzycjy.top/userInfo/deleteCollection?postId=" +
+              "https://api.hzycjy.top/userInfo/deleteCollection?postId=" +
               dataList[index].postId +
               "&openId=" +
               that.num,
@@ -323,7 +323,7 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           let url =
-            "http://api.hzycjy.top/robot/updateRobotUser?openId=" +
+            "https://api.hzycjy.top/robot/updateRobotUser?openId=" +
             num1 +
             "&userName=" +
             this.imfor.userName +

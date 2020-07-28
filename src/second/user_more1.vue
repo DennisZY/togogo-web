@@ -121,7 +121,7 @@ export default {
   methods: {
     logout() {
       var that = this;
-      let url = "http://api.hzycjy.top/admin/logout";
+      let url = "https://api.hzycjy.top/admin/logout";
       axios
         .post(url)
         .then((res) => {
@@ -139,7 +139,7 @@ export default {
       var num = this.$route.query.id;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/userInfo/UserIssueList?openId=" + num,
+        url: "https://api.hzycjy.top/userInfo/UserIssueList?openId=" + num,
       })
         .then((res) => {
           that.list = res.data.oData;
@@ -154,7 +154,7 @@ export default {
       var num = this.$route.query.id;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/userInfo/getUserInfoById?openId=" + num,
+        url: "https://api.hzycjy.top/userInfo/getUserInfoById?openId=" + num,
       })
         .then((res) => {
           that.imfor = res.data.oData;
@@ -201,7 +201,7 @@ export default {
           .$axios({
             method: "delete",
             url:
-              "http://api.hzycjy.top/userInfo/deleteUserIssue?openId=" +
+              "https://api.hzycjy.top/userInfo/deleteUserIssue?openId=" +
               num +
               "&postId=" +
               dataList[index].postId,

@@ -72,7 +72,7 @@
                 <el-upload
                   style="float: left;margin-left:5px"
                   class="avatar-uploader"
-                  action="http://api.hzycjy.top/upload/uploadImg"
+                  action="https://api.hzycjy.top/upload/uploadImg"
                   :headers="myHeaders"
                   :show-file-list="false"
                   :on-success="handleAvatarSuccess"
@@ -381,7 +381,7 @@ export default {
   methods: {
     logout() {
       var that = this;
-      let url = "http://api.hzycjy.top/admin/logout";
+      let url = "https://api.hzycjy.top/admin/logout";
       axios
         .post(url)
         .then((res) => {
@@ -407,7 +407,7 @@ export default {
       var that = this;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/label/postType/list",
+        url: "https://api.hzycjy.top/label/postType/list",
       })
         .then((res) => {
           that.Type = res.data.oData;
@@ -421,7 +421,7 @@ export default {
       var that = this;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/api/home/city",
+        url: "https://api.hzycjy.top/api/home/city",
       })
         .then((res) => {
           that.city_list = res.data.oData;
@@ -445,7 +445,7 @@ export default {
       this.$axios({
         methods: "get",
         url:
-          "http://api.hzycjy.top/userInfo/getUserInfoById?openId=" + that.num,
+          "https://api.hzycjy.top/userInfo/getUserInfoById?openId=" + that.num,
       })
         .then((res) => {
           that.imfor = res.data.oData;
@@ -459,7 +459,7 @@ export default {
       var that = this;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/userInfo/UserIssueList?openId=" + that.num,
+        url: "https://api.hzycjy.top/userInfo/UserIssueList?openId=" + that.num,
       })
         .then((res) => {
           that.list = res.data.oData;
@@ -485,7 +485,7 @@ export default {
           .$axios({
             method: "delete",
             url:
-              "http://api.hzycjy.top/api/post/deletePost?postId=" +
+              "https://api.hzycjy.top/api/post/deletePost?postId=" +
               dataList[index].postId,
           })
           .then(() => {
@@ -512,7 +512,7 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           let url =
-            "http://api.hzycjy.top/robot/updateRobotUser?openId=" +
+            "https://api.hzycjy.top/robot/updateRobotUser?openId=" +
             num1 +
             "&userName=" +
             this.imfor.userName +
@@ -600,7 +600,7 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           var that = this;
-          let url = "http://api.hzycjy.top/api/pushPost/pushPost";
+          let url = "https://api.hzycjy.top/api/pushPost/pushPost";
           let data = {
             cityId: this.form.cityId,
             typeId: this.form.typeId,

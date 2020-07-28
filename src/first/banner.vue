@@ -183,7 +183,7 @@ export default {
   methods: {
     logout() {
       var that = this;
-      let url = "http://api.hzycjy.top/admin/logout";
+      let url = "https://api.hzycjy.top/admin/logout";
       axios
         .post(url)
         .then((res) => {
@@ -200,7 +200,7 @@ export default {
       var that = this;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/label/city/list",
+        url: "https://api.hzycjy.top/label/city/list",
       })
         .then((res) => {
           that.tab1 = res.data.oData;
@@ -214,7 +214,7 @@ export default {
       var that = this;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/label/postType/list",
+        url: "https://api.hzycjy.top/label/postType/list",
       })
         .then((res) => {
           that.tab2 = res.data.oData;
@@ -236,7 +236,7 @@ export default {
         this.$refs[formName].validate((valid) => {
           if (valid) {
             var that = this;
-            let url = "http://api.hzycjy.top/label/city/add";
+            let url = "https://api.hzycjy.top/label/city/add";
             let data = {
               cityName: that.form.something,
             };
@@ -274,7 +274,7 @@ export default {
       if (!this.theSame && this.form.something != "") {
         var that = this;
         let url =
-          "http://api.hzycjy.top/label/city/update?cityId=" +
+          "https://api.hzycjy.top/label/city/update?cityId=" +
           this.tab1[this.a].cityId +
           "&cityName=" +
           that.form.something;
@@ -308,7 +308,7 @@ export default {
         this.$refs[formName].validate((valid) => {
           if (valid) {
             var that = this;
-            let url = "http://api.hzycjy.top/label/postType/add";
+            let url = "https://api.hzycjy.top/label/postType/add";
             let data = {
               typeName: that.form.something,
             };
@@ -345,7 +345,7 @@ export default {
       if (!this.theSame && this.form.something != "") {
         var that = this;
         let url =
-          "http://api.hzycjy.top/label/postType/update?typeId=" +
+          "https://api.hzycjy.top/label/postType/update?typeId=" +
           that.tab2[that.a].typeId +
           "&typeName=" +
           that.form.something;
@@ -380,7 +380,7 @@ export default {
           .$axios({
             method: "delete",
             url:
-              "http://api.hzycjy.top/label/city/delete?cityId=" +
+              "https://api.hzycjy.top/label/city/delete?cityId=" +
               that.tab1[index].cityId,
           })
           .then(() => {
@@ -411,7 +411,7 @@ export default {
           .$axios({
             method: "delete",
             url:
-              "http://api.hzycjy.top/label/postType/delete?typeId=" +
+              "https://api.hzycjy.top/label/postType/delete?typeId=" +
               that.tab2[index].typeId,
           })
           .then(() => {

@@ -133,7 +133,7 @@
                     style="float: left;margin-left:5px"
                     class="avatar-uploader"
                     :headers="myHeaders"
-                    action="http://api.hzycjy.top/upload/uploadImg"
+                    action="https://api.hzycjy.top/upload/uploadImg"
                     :show-file-list="false"
                     :on-success="handleAvatarSuccess"
                     :before-upload="beforeAvatarUpload"
@@ -226,7 +226,7 @@ export default {
   methods: {
     logout() {
       var that = this;
-      let url = "http://api.hzycjy.top/admin/logout";
+      let url = "https://api.hzycjy.top/admin/logout";
       axios
         .post(url)
         .then((res) => {
@@ -265,7 +265,7 @@ export default {
       var num = this.$route.query.id;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/userInfo/getUserInfoById?openId=" + num,
+        url: "https://api.hzycjy.top/userInfo/getUserInfoById?openId=" + num,
       })
         .then((res) => {
           that.imfor = res.data.oData;
@@ -280,7 +280,7 @@ export default {
       var num = this.$route.query.id;
       this.$axios({
         methods: "get",
-        url: "http://api.hzycjy.top/userInfo/UserAskReplyList?openId=" + num,
+        url: "https://api.hzycjy.top/userInfo/UserAskReplyList?openId=" + num,
       })
         .then((res) => {
           that.list = res.data.oData;
@@ -305,7 +305,7 @@ export default {
           .$axios({
             method: "delete",
             url:
-              "http://api.hzycjy.top/api/post/deleteComment?commentId=" +
+              "https://api.hzycjy.top/api/post/deleteComment?commentId=" +
               dataList[index].commentId,
           })
           .then(() => {
@@ -360,7 +360,7 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           let url =
-            "http://api.hzycjy.top/robot/updateRobotUser?openId=" +
+            "https://api.hzycjy.top/robot/updateRobotUser?openId=" +
             num1 +
             "&userName=" +
             this.imfor.userName +
