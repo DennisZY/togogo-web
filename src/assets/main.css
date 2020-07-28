@@ -1,0 +1,85 @@
+#body{
+    border: 0.8px solid rgb(121, 121, 121);
+}
+.content{
+    background-color: rgb(242, 242, 242);
+}
+.title{
+    border-bottom:  0.5px solid rgb(121, 121, 121);
+}
+.title p{
+    font-size: 24px;
+    font-weight:bolder;
+    margin: 10px 15px;
+    width: 50%;
+    display: inline-block;
+}
+.left {
+  margin-top: 15px;
+  width: 164px;
+  text-align: center;
+  display: inline-block;
+}
+.left p {
+  border-bottom: 0.5px solid rgb(121, 121, 121);
+  margin-left: 18px;
+  margin-right: 18px;
+  letter-spacing: 0.7px;
+  width: 130px;
+}
+.left a {
+  font-size: 18px;
+  font-weight: 800px;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  height: 50px;
+  line-height: 50px;
+}
+#choosen {
+  border-bottom: 0.6px solid rgb(121, 121, 121);
+}
+#choosen a {
+  color: rgb(36, 177, 241);
+}
+.formName{
+    margin-left: 56px;
+    font-weight: bold;
+}
+.el-dropdown-link {
+  cursor: pointer;
+  color: #409eff;
+}
+.el-icon-arrow-down {
+  line-height: 36px;
+}
+.el-dropdown {
+  font-size: 15px;
+  height: 36px;
+  border: 0.5px solid #409eff;
+  margin-left: 10px;
+  border-radius: 3px;
+  margin-bottom: 4px;
+}
+.el-dropdown span {
+  line-height: 24px;
+}
+.search{
+    margin-left: 10px;
+    float: left;
+}
+.search_btn{
+    position: relative;
+    left: -18px;
+    top: -0.5px;
+}
+#text button {
+  border: 0;
+  background-color: transparent;
+  color: rgb(36, 177, 241);
+}
+#text a {
+  font-size: 12px;
+  text-decoration: none;
+  color: rgb(36, 177, 241);
+}
