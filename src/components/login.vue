@@ -88,7 +88,7 @@ export default {
         loginData.append("adminPwd", this.loginForm.password);
         loginData.append("userState", this.loginForm.user_type);
         this.$axios({
-          method: "post",api.hzycjy.top
+          method: "post",
           url: "http://api.hzycjy.top/admin/login",
           data: loginData,
         })
